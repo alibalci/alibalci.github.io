@@ -1,67 +1,556 @@
-# Privacy Policy for KPSS 2026 Soru Çöz & Deneme
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gizlilik Politikası — KPSS 2026 Soru Çöz & Deneme</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-light: #DBEAFE;
+      --primary-dark: #1D4ED8;
+      --text: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --accent: #0EA5E9;
+    }
 
-**Last updated: April 16, 2026**
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-Ali Balci built the KPSS 2026 Soru Çöz & Deneme app as an Ad Supported app. This SERVICE is provided by Ali Balci at no cost and is intended for use as is.
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
 
-This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: #fff;
+      padding: 56px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='28'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      pointer-events: none;
+    }
 
-## Information Collection and Use
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.2);
+      border: 3px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 36px;
+    }
 
-For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to:
-*   Email address (for authentication via Firebase)
-*   First and Last Name (for user profile)
-*   Purchase history and subscriptions (processed via RevenueCat and Apple App Store / Google Play)
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
 
-The information that I request will be retained on your device and is not collected by me in any way other than necessary for the app's functionality (authentication, IAP capabilities, and profile display).
+    header p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto;
+    }
 
-The app does use third party services that may collect information used to identify you.
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      margin-top: 16px;
+      font-weight: 600;
+    }
 
-Link to privacy policy of third party service providers used by the app:
+    /* ── Layout ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
 
-*   [Google Play Services](https://www.google.com/policies/privacy/)
-*   [AdMob](https://support.google.com/admob/answer/6128543?hl=en)
-*   [Google Analytics for Firebase](https://firebase.google.com/policies/analytics)
-*   [Firebase Crashlytics](https://firebase.google.com/support/privacy/)
-*   [RevenueCat](https://www.revenuecat.com/privacy)
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 40px 0 32px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
 
-## Log Data
+    .toc h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
 
-I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
+    .toc ol {
+      padding-left: 20px;
+    }
 
-## Cookies
+    .toc li {
+      margin-bottom: 6px;
+    }
 
-Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.15s;
+    }
 
-This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+    .toc a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
 
-## Service Providers
+    /* ── Sections ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
 
-I may employ third-party companies and individuals due to the following reasons:
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
 
-*   To facilitate our Service;
-*   To provide the Service on our behalf;
-*   To perform Service-related services; or
-*   To assist us in analyzing how our Service is used.
+    .section-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--primary-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
 
-I want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+    section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
 
-## Security
+    section p {
+      color: #334155;
+      margin-bottom: 14px;
+      font-size: 0.97rem;
+    }
 
-I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
+    section p:last-child {
+      margin-bottom: 0;
+    }
 
-## Children’s Privacy
+    section ul, section ol {
+      padding-left: 20px;
+      margin: 10px 0 14px;
+    }
 
-These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.
+    section li {
+      color: #334155;
+      margin-bottom: 8px;
+      font-size: 0.97rem;
+    }
 
-## Changes to This Privacy Policy
+    /* ── Info chips ── */
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
 
-I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
 
-This policy is effective as of 2026-01-19
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
 
-## Contact Us
+    .highlight p {
+      color: var(--primary-dark) !important;
+      margin: 0 !important;
+      font-weight: 500;
+    }
 
-If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at kpssminitest@gmail.com.
+    /* ── Warning box ── */
+    .warning {
+      background: #FFF7ED;
+      border-left: 4px solid #F97316;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .warning p {
+      color: #9A3412 !important;
+      margin: 0 !important;
+      font-size: 0.9rem;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 16px;
+      padding: 32px;
+      color: #fff;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      opacity: 0.9;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary);
+      border-radius: 12px;
+      padding: 12px 28px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity 0.15s;
+    }
+
+    .contact-card a:hover {
+      opacity: 0.9;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer strong {
+      color: var(--primary);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      section { padding: 22px 18px; }
+      .toc { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">📝</div>
+  <h1>Gizlilik Politikası</h1>
+  <p>KPSS 2026 Soru Çöz & Deneme uygulamasının kişisel verilerinizi nasıl işlediğini açıklar.</p>
+  <span class="badge">Son Güncelleme: Nisan 2026</span>
+</header>
+
+<div class="container">
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="İçindekiler">
+    <h2>İçindekiler</h2>
+    <ol>
+      <li><a href="#toplanan-veriler">Toplanan Veriler</a></li>
+      <li><a href="#verilerin-kullanimi">Verilerin Kullanımı</a></li>
+      <li><a href="#firebase">Firebase Hizmetleri</a></li>
+      <li><a href="#revenuecat">RevenueCat &amp; Uygulama İçi Satın Almalar</a></li>
+      <li><a href="#admob">Google AdMob &amp; Reklamlar</a></li>
+      <li><a href="#bildirimler">Push Bildirimleri</a></li>
+      <li><a href="#veri-saklama">Veri Saklama ve Silme</a></li>
+      <li><a href="#cocuklar">Çocukların Gizliliği</a></li>
+      <li><a href="#haklariniz">Haklarınız</a></li>
+      <li><a href="#degisiklikler">Politika Değişiklikleri</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section id="toplanan-veriler">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2>1. Toplanan Veriler</h2>
+    </div>
+
+    <p>KPSS 2026 Soru Çöz & Deneme, aşağıdaki kategorilerde veri toplamaktadır:</p>
+
+    <p><strong>Hesap ve Kimlik Bilgileri</strong></p>
+    <ul>
+      <li>Ad, soyad ve görünen kullanıcı adı</li>
+      <li>E-posta adresi (kayıt ve giriş için)</li>
+      <li>Kullanılan platform (iOS / Android)</li>
+    </ul>
+
+    <p><strong>Uygulama İçi Aktivite Verileri</strong></p>
+    <ul>
+      <li>Çözülen soru sayısı ve kategori bazlı istatistikler</li>
+      <li>Doğru / yanlış / boş cevap dağılımı</li>
+      <li>Günlük giriş serisi (streak) ve aktivite tarihleri</li>
+      <li>Kazanılan rozetler ve deneyim puanı (XP)</li>
+      <li>Sahip olunan ve kullanılan kozmetik öğeler (avatar, çerçeve)</li>
+      <li>Altın bakiyesi ve işlem geçmişi</li>
+    </ul>
+
+    <p><strong>Teknik Veriler</strong></p>
+    <ul>
+      <li>Push bildirimi için cihaz token'ı (kullanıcı izin verirse)</li>
+      <li>Uygulama kullanım olayları (Firebase Analytics)</li>
+      <li>Hata ve çökme raporları</li>
+    </ul>
+
+    <div class="highlight">
+      <p>🔒 Uygulamamız konum, kamera, mikrofon veya rehber gibi hassas cihaz izinleri talep etmemektedir.</p>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="verilerin-kullanimi">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <h2>2. Verilerin Kullanımı</h2>
+    </div>
+
+    <p>Topladığımız veriler yalnızca aşağıdaki amaçlarla kullanılmaktadır:</p>
+    <ul>
+      <li><strong>Hesap yönetimi:</strong> Kayıt, giriş ve profil işlemleri</li>
+      <li><strong>Kişiselleştirilmiş deneyim:</strong> İlerleme takibi, seviye sistemi, rozet ödülleri</li>
+      <li><strong>Sıralama tablosu:</strong> Kullanıcılar arasında rekabetçi sıralama</li>
+      <li><strong>Bildirimler:</strong> Günlük hatırlatma ve motivasyon mesajları (izin alındığında)</li>
+      <li><strong>Uygulama iyileştirme:</strong> Kullanım istatistikleri ve hata ayıklama</li>
+      <li><strong>Monetizasyon:</strong> Premium üyelik ve reklam yönetimi</li>
+    </ul>
+
+    <p>Verileriniz hiçbir koşulda üçüncü taraflara satılmaz veya kiralanmaz.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="firebase">
+    <div class="section-header">
+      <div class="section-icon">🔥</div>
+      <h2>3. Firebase Hizmetleri</h2>
+    </div>
+
+    <p>Uygulama, Google LLC tarafından sağlanan Firebase platformunu kullanmaktadır:</p>
+
+    <div class="chip-group">
+      <span class="chip">🔐 Firebase Authentication</span>
+      <span class="chip">🗄️ Cloud Firestore</span>
+      <span class="chip">📊 Firebase Analytics</span>
+      <span class="chip">🔔 Firebase Cloud Messaging</span>
+    </div>
+
+    <ul>
+      <li><strong>Firebase Authentication:</strong> E-posta / şifre ile güvenli kimlik doğrulama sağlar. Şifreleriniz düz metin olarak saklanmaz.</li>
+      <li><strong>Cloud Firestore:</strong> Kullanıcı profili, sınav istatistikleri ve soru veritabanı burada tutulur.</li>
+      <li><strong>Firebase Analytics:</strong> Anonim kullanım davranışı analiz edilir (ekran görüntülemeleri, olay sayımları). IP adresi anonimleştirilir.</li>
+      <li><strong>Firebase Cloud Messaging (FCM):</strong> Push bildirimleri iletmek için kullanılır. Yalnızca izin verdiğinizde aktiftir.</li>
+    </ul>
+
+    <p>Firebase'in veri işleme politikası için: <strong>policies.google.com/privacy</strong></p>
+  </section>
+
+  <!-- 4 -->
+  <section id="revenuecat">
+    <div class="section-header">
+      <div class="section-icon">💳</div>
+      <h2>4. RevenueCat &amp; Uygulama İçi Satın Almalar</h2>
+    </div>
+
+    <p>Premium üyelik satın alımları, RevenueCat Inc. altyapısı üzerinden işlenmektedir. RevenueCat şunları yönetir:</p>
+    <ul>
+      <li>Abonelik durumu ve yenileme takibi</li>
+      <li>Apple App Store / Google Play Store ödeme doğrulaması</li>
+      <li>Cihazlar arası premium durum senkronizasyonu</li>
+    </ul>
+
+    <div class="warning">
+      <p>⚠️ Ödeme bilgileriniz (kart numarası, fatura adresi vb.) doğrudan Apple veya Google tarafından işlenir. Bu bilgilere uygulamamızın erişimi yoktur.</p>
+    </div>
+
+    <p>RevenueCat gizlilik politikası: <strong>revenuecat.com/privacy</strong></p>
+  </section>
+
+  <!-- 5 -->
+  <section id="admob">
+    <div class="section-header">
+      <div class="section-icon">📢</div>
+      <h2>5. Google AdMob &amp; Reklamlar</h2>
+    </div>
+
+    <p>Ücretsiz kullanıcılara gösterim reklamları, Google LLC'nin AdMob platformu aracılığıyla sunulmaktadır. AdMob kapsamında:</p>
+    <ul>
+      <li>Reklam performansını ölçmek için reklamcılık tanımlayıcıları (IDFA/GAID) kullanılabilir.</li>
+      <li>Kişiselleştirilmiş reklam gösterimi, geçerli platform kuralları ve kullanıcı tercihlerine bağlıdır.</li>
+      <li>Avrupa'da GDPR, ABD'de CCPA gerekliliklerine uyum sağlanmaktadır.</li>
+    </ul>
+
+    <div class="highlight">
+      <p>✨ <strong>Premium üyeler</strong> hiçbir reklam görmez. Reklamlar yalnızca ücretsiz kullanıcılara, isteğe bağlı (altın kazanmak için izlenen) veya otomatik olarak sunulur.</p>
+    </div>
+
+    <p>Google AdMob gizlilik politikası: <strong>policies.google.com/privacy</strong></p>
+  </section>
+
+  <!-- 6 -->
+  <section id="bildirimler">
+    <div class="section-header">
+      <div class="section-icon">🔔</div>
+      <h2>6. Push Bildirimleri</h2>
+    </div>
+
+    <p>Uygulama, aşağıdaki amaçlarla push bildirimi gönderebilir:</p>
+    <ul>
+      <li>Günlük çalışma hatırlatmaları</li>
+      <li>Seri (streak) kaybı uyarıları</li>
+      <li>Yeni özellik duyuruları</li>
+    </ul>
+
+    <p>Bildirimler yalnızca cihazınızda <strong>izin verdiğinizde</strong> iletilir. İzninizi istediğiniz zaman işletim sistemi ayarlarından geri alabilirsiniz. İzin geri alındığında cihaz token'ınız sistemde pasif hale getirilir.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="veri-saklama">
+    <div class="section-header">
+      <div class="section-icon">🗂️</div>
+      <h2>7. Veri Saklama ve Silme</h2>
+    </div>
+
+    <p>Verileriniz hesabınız aktif olduğu sürece saklanır.</p>
+
+    <p><strong>Hesap silme:</strong> Uygulama içindeki <em>Profil → Hesabı Sil</em> seçeneğini kullanarak tüm kişisel verilerinizin ve istatistiklerinizin kalıcı olarak silinmesini talep edebilirsiniz. Silme işlemi 30 gün içinde tamamlanır.</p>
+
+    <p><strong>Firebase Analytics verileri:</strong> Google'ın veri saklama politikasına göre anonimleştirilmiş olay verileri en fazla 14 ay saklanır.</p>
+
+    <p>Hesabınızı silmeden belirli verilerinizi kaldırmamızı da talep edebilirsiniz. Bunun için aşağıdaki iletişim adresini kullanın.</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="cocuklar">
+    <div class="section-header">
+      <div class="section-icon">👦</div>
+      <h2>8. Çocukların Gizliliği</h2>
+    </div>
+
+    <p>KPSS 2026 Soru Çöz & Deneme, 13 yaşın altındaki çocuklara yönelik değildir ve bilerek onlardan kişisel veri toplamaz. KPSS sınavı 18 yaş üstü bireyler için tasarlanmış olup uygulamamızın hedef kitlesi bu grupta yer almaktadır.</p>
+
+    <p>13 yaşın altında bir çocuğun veri sağladığını fark edersek, söz konusu verileri derhal sileceğiz.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="haklariniz">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <h2>9. Haklarınız</h2>
+    </div>
+
+    <p>KVKK (Kişisel Verilerin Korunması Kanunu) ve geçerli diğer mevzuat kapsamında aşağıdaki haklara sahipsiniz:</p>
+    <ul>
+      <li><strong>Erişim hakkı:</strong> Hakkınızda işlediğimiz verileri öğrenme</li>
+      <li><strong>Düzeltme hakkı:</strong> Yanlış veya eksik verilerin güncellenmesini isteme</li>
+      <li><strong>Silme hakkı:</strong> Kişisel verilerinizin silinmesini talep etme</li>
+      <li><strong>İşlemeye itiraz hakkı:</strong> Belirli veri işleme faaliyetlerine itiraz etme</li>
+      <li><strong>Taşınabilirlik hakkı:</strong> Verilerinizin makine okunabilir formatta tarafınıza iletilmesini isteme</li>
+    </ul>
+
+    <p>Tüm bu hakları kullanmak için aşağıdaki e-posta adresimize yazabilirsiniz.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="degisiklikler">
+    <div class="section-header">
+      <div class="section-icon">📌</div>
+      <h2>10. Politika Değişiklikleri</h2>
+    </div>
+
+    <p>Bu gizlilik politikası gerektiğinde güncellenebilir. Önemli değişiklikler uygulama içi bildirim veya e-posta yoluyla duyurulacaktır.</p>
+
+    <p>Politikanın güncel sürümü her zaman bu sayfada yayımlanacak olup yürürlük tarihi yukarıda belirtilecektir.</p>
+
+    <p>Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="iletisim">
+    <div class="section-header">
+      <div class="section-icon">✉️</div>
+      <h2>11. İletişim</h2>
+    </div>
+
+    <p>Bu gizlilik politikası hakkında sorularınız, talepleriniz veya şikayetleriniz için bizimle iletişime geçebilirsiniz.</p>
+
+    <div class="contact-card">
+      <h3>KPSS 2026 Soru Çöz & Deneme</h3>
+      <p>Gizlilik ve veri talepleriniz için e-posta gönderin. En geç 72 saat içinde yanıt vermeye çalışıyoruz.</p>
+      <a href="mailto:kpssminitest@gmail.com">kpssminitest@gmail.com</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 <strong>KPSS 2026 Soru Çöz & Deneme</strong> · Tüm hakları saklıdır · Bundle ID: com.alibalci.kpssminitest</p>
+</footer>
+
+</body>
+</html>
